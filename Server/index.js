@@ -18,7 +18,7 @@ const PORT = process.env.PORT;
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: 'https://coursedesk11.netlify.app/', 
+    origin: 'https://coursedesk11.netlify.app', 
     credentials: true,
 }));
 
