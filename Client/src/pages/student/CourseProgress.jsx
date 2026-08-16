@@ -101,13 +101,16 @@ const CourseProgress = () => {
         <div className="flex-1 md:w-3/5 h-fit rounded-lg shadow-lg p-4">
           <div>
             <video
-              src={currentLecture?.videoUrl || initialLecture.videoUrl}
-              controls
-              className="w-full h-auto md:rounded-lg"
-              onPlay={() =>
-                handleLectureProgress(currentLecture?._id || initialLecture._id)
-              }
-            />
+  src={(currentLecture?.videoUrl || initialLecture.videoUrl)?.replace(
+    /^http:\/\//,
+    "https://"
+  )}
+  controls
+  className="w-full h-auto md:rounded-lg"
+  onPlay={() =>
+    handleLectureProgress(currentLecture?._id || initialLecture._id)
+  }
+/>
           </div>
           {/* Display current watching lecture title */}
           <div className="mt-2 ">

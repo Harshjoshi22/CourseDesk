@@ -108,7 +108,7 @@ const handleAuth = () => {
                  <ReactPlayer
                  width="100%"
                  height={"100%"}
-                 src={course.lectures[0].videoUrl}
+                 src={course.lectures[0].videoUrl?.replace(/^http:\/\//, "https://")}
                  controls={true}
                  />
               </div>

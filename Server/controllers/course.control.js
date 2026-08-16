@@ -223,7 +223,12 @@ export const editLecture = async (req,res) => {
 
         // update lecture
         if(lectureTitle) lecture.lectureTitle = lectureTitle;
-        if(videoInfo?.videoUrl) lecture.videoUrl = videoInfo.videoUrl;
+        if (videoInfo?.videoUrl) {
+    lecture.videoUrl = videoInfo.videoUrl.replace(
+        /^http:\/\//,
+        "https://"
+    );
+}
         if(videoInfo?.publicId) lecture.publicId = videoInfo.publicId;
         lecture.isPreviewFree = isPreviewFree;
 
