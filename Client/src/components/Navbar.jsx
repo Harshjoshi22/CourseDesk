@@ -1047,41 +1047,39 @@ const Navbar = () => {
               </Button>
 
 
-              <Button
-                className="
-                  h-10
-                  rounded-xl
+             <Button
+  className="
+    h-10
+    rounded-xl
+    border-0
 
-                  bg-gradient-to-r
-                  from-blue-600
-                  to-indigo-600
+    bg-blue-600
+    px-6
 
-                  px-6
+    text-sm
+    font-semibold
+    text-white
 
-                  text-sm
-                  font-semibold
-                  text-white
+    shadow-[0_5px_15px_rgba(37,99,235,0.20)]
 
-                  shadow-[0_5px_15px_rgba(37,99,235,0.20)]
+    transition-all
+    duration-200
 
-                  transition-all
-                  duration-200
+    hover:bg-blue-700
+    hover:text-white
+    hover:shadow-[0_7px_20px_rgba(37,99,235,0.28)]
 
-                  hover:from-blue-700
-                  hover:to-indigo-700
-                  hover:shadow-[0_7px_20px_rgba(37,99,235,0.28)]
-
-                  dark:bg-primary
-                  dark:from-primary
-                  dark:to-primary
-                  dark:hover:bg-primary/90
-                "
-                onClick={() =>
-                  navigate("/login?mode=signup")
-                }
-              >
-                Sign Up
-              </Button>
+    dark:bg-primary
+    dark:text-primary-foreground
+    dark:hover:bg-primary/90
+    dark:hover:text-primary-foreground
+  "
+  onClick={() =>
+    navigate("/login?mode=signup")
+  }
+>
+  Sign Up
+</Button>
 
             </div>
 
